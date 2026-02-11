@@ -1,0 +1,30 @@
+.events-page { max-width: 1100px; margin: 0 auto; padding: 22px 16px 40px; }
+
+.events-hero { display:flex; justify-content:space-between; gap:24px; padding: 18px 0 24px; }
+.events-hero__crumbs { font-size: 12px; color: rgba(0,0,0,.5); }
+.events-hero__title { margin: 8px 0 6px; font-size: 40px; font-weight: 900; letter-spacing: -0.02em; }
+.events-hero__desc { margin: 0; max-width: 520px; color: rgba(0,0,0,.6); line-height: 1.5; }
+
+.events-hero__right {
+  font-size: 96px;
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  line-height: 0.9;
+  color: transparent;
+  -webkit-text-stroke: 2px rgba(0,0,0,.65);
+  opacity: .45;
+  user-select: none;
+}
+
+.events-section { margin-top: 26px; }
+.events-section__title { margin: 0 0 12px; font-size: 14px; font-weight: 900; color: rgba(0,0,0,.65); }
+
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+@media (max-width: 1100px) { .events-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 860px)  { .events-grid { grid-template-columns: repeat(2, 1fr); } .events-hero__right{ display:none; } }
+@media (max-width: 520px)  { .events-grid { grid-template-columns: 1fr; } }

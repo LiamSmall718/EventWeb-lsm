@@ -1,0 +1,189 @@
+/* Container principal du header */
+.events-header {
+    width: 100%;
+    height: 70px;
+    padding: 0 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: var(--card-bg);
+    border-bottom: 1px solid var(--border);
+    box-shadow: var(--shadow);
+}
+
+/* Titre */
+.events-header__title {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text);
+
+    position: relative; /* FIX */
+    z-index: 1;         /* FIX */
+}
+
+/* Zone droite (actions + menu) */
+.events-header__right {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+/* Bouton "Créer" */
+.events-header__createbtn {
+    padding: 8px 14px;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.15s ease;
+}
+
+.events-header__createbtn:hover:not(:disabled) {
+    background: var(--primary-hover);
+}
+
+.events-header__createbtn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Bouton icône (loupe) */
+.events-header__iconbtn {
+    width: 38px;
+    height: 38px;
+    display: grid;
+    place-items: center;
+
+    font-size: 20px;
+    border: 1px solid var(--border);
+    background: var(--card-bg);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.15s ease;
+}
+
+.events-header__iconbtn:hover:not(:disabled) {
+    background: #f1f1f3;
+}
+
+/* Avatar + chevron */
+.events-header__userbtn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    padding: 6px 10px;
+    border-radius: 50px;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+
+    cursor: pointer;
+    transition: 0.15s ease;
+}
+
+.events-header__userbtn:hover:not(:disabled) {
+    background: #f3f3f4;
+}
+
+.events-header__userbtn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+/* Avatar cercle */
+.events-header__avatar {
+    width: 32px;
+    height: 32px;
+
+    border-radius: 50%;
+    background: white;
+    color: var(--text);
+
+    font-size: 15px;
+    font-weight: 700;
+
+    border: 1px solid var(--border);
+
+    display: grid;
+    place-items: center;
+}
+
+/* Chevron ▾ */
+.events-header__chev {
+    font-size: 12px;
+    color: var(--text-light);
+}
+
+/* Wrapper du menu déroulant */
+.events-header__menuWrap {
+    position: relative;
+    z-index: 50; /* FIX — assure que le conteneur passe au-dessus du titre */
+}
+
+/* Dropdown menu */
+.events-header__menu {
+    position: absolute;
+    top: calc(100% + 6px);
+    right: 0;
+
+    width: 160px;
+
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+
+    overflow: hidden;
+    animation: fadeMenu 0.15s ease;
+
+    z-index: 9999; /* FIX — le menu passe devant tout */
+}
+
+@keyframes fadeMenu {
+    from {
+        opacity: 0;
+        transform: translateY(-6px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Items du menu */
+.events-header__menuitem {
+    width: 100%;
+    padding: 12px 14px;
+    background: transparent;
+    border: none;
+
+    text-align: left;
+    font-size: 14px;
+    cursor: pointer;
+
+    transition: background 0.15s ease;
+}
+
+.events-header__menuitem:hover {
+    background: #f3f4f6;
+}
+
+.events-header__menuitem.danger {
+    color: var(--danger);
+    font-weight: 500;
+}
+
+.events-header__menuitem.danger:hover {
+    background: #fff0f0;
+}
+
+.events-header__menusep {
+    height: 1px;
+    background: var(--border);
+}

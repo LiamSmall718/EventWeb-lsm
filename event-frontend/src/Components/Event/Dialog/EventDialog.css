@@ -1,0 +1,91 @@
+.dialog-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.35);
+    display: grid;
+    place-items: center;
+    padding: 16px;
+    z-index: 999;
+}
+
+.dialog {
+    width: min(520px, 100%);
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    padding: 16px 16px 14px 16px;
+}
+
+.dialog__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 10px;
+}
+
+.dialog__title {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--text);
+}
+
+.dialog__close {
+    border: 1px solid var(--border);
+    background: #fff;
+    border-radius: 10px;
+    padding: 6px 10px;
+    cursor: pointer;
+}
+
+.dialog__close:hover {
+    background: #f3f4f6;
+}
+
+.dialog__body {
+    display: grid;
+    gap: 10px;
+    padding: 8px 0;
+}
+
+.dialog__row {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 10px 12px;
+    background: #fafafa;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+}
+
+.dialog__label {
+    font-size: 12px;
+    color: var(--text-light);
+}
+
+.dialog__value {
+    font-size: 13px;
+    font-weight: 650;
+    color: var(--text);
+    text-align: right;
+}
+
+.dialog__footer {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+.dialog__btn {
+    padding: 8px 12px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    background: #fff;
+    cursor: pointer;
+}
+
+.dialog__btn:hover {
+    background: #f3f4f6;
+}

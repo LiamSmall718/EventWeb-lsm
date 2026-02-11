@@ -1,0 +1,104 @@
+.evcard{
+    background:#fff;
+    border:1px solid rgba(0,0,0,.08);
+    border-radius:16px;
+    overflow:hidden;
+    box-shadow:0 10px 30px rgba(0,0,0,.06);
+    display:flex;
+    flex-direction:column;
+}
+
+.evcard__top{
+    display:flex;
+    gap:12px;
+    padding:12px;
+    min-height:90px;
+}
+
+.evcard__date{
+    width:72px;
+    padding-right:12px;
+    border-right:1px solid rgba(0,0,0,.08);
+    text-align:center;
+}
+
+.evcard__day{
+    font-size:30px;
+    font-weight:900;
+    line-height:1;
+}
+
+.evcard__month{
+    font-size:12px;
+    font-weight:800;
+    opacity:.65;
+    text-transform:uppercase;
+    margin-top:4px;
+}
+
+.evcard__year{
+    font-size:12px;
+    opacity:.45;
+    margin-top:2px;
+}
+
+.evcard__content{
+    flex:1;
+    min-width:0;
+}
+
+.evcard__title{
+    font-weight:900;
+    font-size:15px;
+}
+
+.evcard__meta{
+    margin-top:6px;
+    font-size:12px;
+    opacity:.6;
+}
+
+.evcard__capacity{
+    margin-top:8px;
+    font-size:12px;
+    opacity:.65;
+}
+
+.evcard__media{
+    height:110px;
+    background:linear-gradient(135deg, rgba(0,0,0,.08), rgba(0,0,0,.02));
+}
+
+.evcard__actions{
+    display:flex;
+    border-top:1px solid rgba(0,0,0,.08);
+}
+
+.evcard__btn{
+    flex:1;
+    background:#111;
+    color:#fff;
+    border:0;
+    padding:10px 0;
+    cursor:pointer;
+    font-weight:800;
+    font-size:12px;
+    transition:opacity .15s;
+}
+
+.evcard__btn:disabled{
+    opacity:.35;
+    cursor:not-allowed;
+}
+
+.evcard__btn--ghost{
+    background:#333;
+}
+
+.evcard__btn + .evcard__btn{
+    border-left:1px solid rgba(255,255,255,.2);
+}
+
+.evcard__btn:hover:not(:disabled){
+    opacity:.85;
+}

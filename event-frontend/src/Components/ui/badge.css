@@ -1,0 +1,68 @@
+/* Reset minimal "rt-reset" */
+.rt-reset {
+    box-sizing: border-box;
+}
+
+.rt-Badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 18px;
+    padding: 0 6px;
+
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    line-height: 1;
+
+    border: 1px solid var(--border);
+    background: #f3f4f6;
+    color: var(--text);
+
+    border-radius: 999px;
+    user-select: none;
+    white-space: nowrap;
+}
+
+/* Radius variants */
+.rt-Badge[data-radius="full"] {
+    border-radius: 999px;
+}
+.rt-Badge[data-radius="md"] {
+    border-radius: 10px;
+}
+.rt-Badge[data-radius="lg"] {
+    border-radius: 14px;
+}
+
+/* Color variants */
+.rt-Badge[data-accent-color="gray"] {
+    background: #f3f4f6;
+    border-color: var(--border);
+    color: var(--text);
+}
+
+.rt-Badge[data-accent-color="blue"] {
+    background: rgba(37, 99, 235, 0.10);
+    border-color: rgba(37, 99, 235, 0.25);
+    color: #1d4ed8;
+}
+
+.rt-Badge[data-accent-color="green"] {
+    background: rgba(22, 163, 74, 0.10);
+    border-color: rgba(22, 163, 74, 0.25);
+    color: #15803d;
+}
+
+.rt-Badge[data-accent-color="orange"] {
+    background: rgba(249, 115, 22, 0.12);
+    border-color: rgba(249, 115, 22, 0.25);
+    color: #9a3412;
+}
+
+.rt-Badge[data-accent-color="red"] {
+    background: rgba(220, 38, 38, 0.10);
+    border-color: rgba(220, 38, 38, 0.25);
+    color: #b91c1c;
+}
