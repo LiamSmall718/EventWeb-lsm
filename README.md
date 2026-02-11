@@ -23,12 +23,17 @@ git clone https://github.com/LiamSmall718/EventWeb-lsm.git
 cd EventWeb-lsm
 
 # Configuration de la base PostgreSQL
-# (changer 'liamsmall' par votre utilisateur PostgreSQL)
-dropdb -U liamsmall eventdb 2>/dev/null
-createdb -U liamsmall eventdb
+dropdb -U postgres eventdb 2>/dev/null
+createdb -U postgres eventdb
+psql -U postgres -d eventdb -f event-backend/eventweb.sql
 
 # Import du schéma SQL
-psql -U liamsmall -d eventdb -f event-backend/eventweb.sql
+psql -U postgres -d eventdb -f event-backend/eventweb.sql
+
+# BACKEND (nouveau terminal, depuis la racine EventWeb)
+cd event-backend
+npm install
+node src/server.js
 
 # FRONTEND (nouveau terminal, depuis la racine EventWeb)
 cd event-frontend
