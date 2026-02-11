@@ -1,22 +1,42 @@
-# Create a new react project #
+# EventWeb 
 
-1. create a folder event-backend and cd in this folder
-2. type the following commands : 
-3. npm init -y
-4. npm install express core bcryptjs jsonwebtoken pg
-5. cd ..
-6. npm create vite@latest event-frontend -- --template react-ts
-7. (npm run dev to launch the website)
-8. cd event-frontend
-9. npm install sass
-10. npm install
+Une application web moderne et jolie de gestion d'événements construite avec React, Node.js et PostgreSQL
 
-# Postgres #
+## Prérequis
 
-1. add the path of the postgres app (C:\Program Files\PostgreSQL\18\bin) in your windows PATH
-2. type de following commands :
-3. psql -U postgres
-4. type your password
-5. CREATE DATABASE DBname ;
-6. \c dbname ;
-7. use vs extension postgres sql (the second one) to visualize the database
+- Node.js
+- npm
+- PostgreSQL
+
+##  Installation super rapide
+
+Copiez-collez ces commandes dans votre terminal :
+
+```bash
+# vérif que tout est là
+node -v
+npm -v
+psql --version
+
+# Cloner le projet
+git clone https://github.com/LiamSmall718/EventWeb-lsm.git
+cd EventWeb-lsm
+
+# Configuration de la base PostgreSQL
+# (changer 'liamsmall' par votre utilisateur PostgreSQL)
+dropdb -U liamsmall eventdb 2>/dev/null
+createdb -U liamsmall eventdb
+
+# Import du schéma SQL
+psql -U liamsmall -d eventdb -f event-backend/eventweb.sql
+
+# FRONTEND (nouveau terminal, depuis la racine EventWeb)
+cd event-frontend
+npm i react-hot-toast
+npm install
+npm run dev
+```
+
+L'application est dispo en navigateur à l'adresse : **http://localhost:5173**
+
+
